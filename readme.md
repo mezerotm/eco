@@ -25,11 +25,11 @@ Dependencies: [WiFi101](https://www.arduino.cc/en/Reference/WiFi101), [ArduinoST
 <sub>*Visual Studio & Visual Micro are not required, but recommended to work with C & C++ files</sub>
 
 ## Maintainers
-- @mezerotm : [email](mailto:mezerotm@gmail.com)
-- @ravenusmc
-- @NJTuley
-- @novasolo17
-- @hawaiianmoon
+- [@mezerotm](https://github.com/mezerotm)
+- [@ravenusmc](https://github.com/ravenusmc)
+- [@NJTuley](https://github.com/NJTuley)
+- [@novasolo17](https://github.com/novasolo17)
+- [@hawaiianmoon](https://github.com/hawaiianmoon)
 
 ## Contribute
 You can [post questions](https://github.com/mezerotm/eco/issues).
