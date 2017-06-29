@@ -1,0 +1,23 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "eco api",
+  "main": "api.js",
+  "scripts": {
+    "start": "nodemon",
+    "test": "karma start karma.conf.js --log-level debug --single-run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "CC BY-NC 4.0",
+  "dependencies": {
+    "restify": "^5.0.0",
+    "restify-router": "^0.4.2"
+  },
+  "devDependencies": {
+    "jasmine-core": "^2.6.4",
+    "karma": "^1.7.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.0"
+  }
+}
