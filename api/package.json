@@ -2,7 +2,7 @@
   "name": "api",
   "version": "1.0.0",
   "description": "eco api",
-  "main": "src/api.js",
+  "main": "api.js",
   "scripts": {
     "start": "nodemon"
   },

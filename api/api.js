@@ -25,7 +25,7 @@ function recursivelyApplyRoutes(route){
 		});
 	})();
 }
-recursivelyApplyRoutes('/routes');
+recursivelyApplyRoutes('/src/routes');
 
 server.listen(process.env.PORT || 80, err =>{
 	if(err) console.log(err);
