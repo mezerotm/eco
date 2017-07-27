@@ -192,7 +192,7 @@ CREATE PROCEDURE add_friend(IN `user_email` VARCHAR(64), IN `add_friend_email` V
 			WHERE u.`email_address` = `user_email` OR u.`email_address` = `add_friend_email`) THEN
 		/* add the friend */
 		INSERT INTO `friends` (`user1_email`, `user2_email`, `friend_status`)
-		VALUES (`add_friend_email`, `user_email`, 0); /* add friend as a pending friend (friend_status = 0) */
+		VALUES (`add_friend_email`, `user_email`, 1); /* add friend as a pending friend (friend_status = 0) */
 	END IF;
 	END //
 
