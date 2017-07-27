@@ -255,5 +255,25 @@ CREATE PROCEDURE verify_password(IN `email` VARCHAR(64))
 	WHERE u.`email_address` = `email`;
 	END //
 
+/*
+	set the password of a user given their email
+	@param email the email of the user whose password is being set
+	@param password_in the password that is being set
+*/
+CREATE PROCEDURE set_password(IN `email` VARCHAR(64), IN `password_in` VARCHAR(64))
+	BEGIN
+	IF EXISTS (SELECT *
+			FROM `shadows` as s
+			WHERE s.`email_address` = `email`) THEN
+		UPDATE `shadows`
+		SET `password` = `password_in`
+		WHERE `email_address` = `email`;
+	ELSEIF EXISTS (SELECT *
+			FROM `users` as u
+			WHERE u.`email_address` = `email`) THEN
+		INSERT INTO `shadows` (`email_address`, `password`)
+		VALUES(`email`, `password_in`);
+	END IF;
+	END //
 
 DELIMITER ;
