@@ -13,17 +13,20 @@ router.get('/', (req, res, next) =>{
 	if(!email_address || !password)
 		return res.send(412, 'Precondition Failed');
 
-	let isValidUser = true; // MySQL procedural statement : verify user
-	if(isValidUser){
-		let session_id = sjcl.hash.sha256.hash(new Date().getTime());
-		session_id = sjcl.codec.hex.fromBits(session_id);
-		// MySQL procedural statement : set session_id
-
-		res.json({
-			session_id: session_id
-		});
-	}else
-		return res.send(401, 'Unauthorized');
+	connection.query(`call verify_password('${email_address}', '${password}'`, (err, results, fields) => {
+		if(err) return res.send(404, 'Not Found');
+		if(password == results[0]){
+			let session_id = sjcl.hash.sha256.hash(new Date().getTime());
+			session_id = sjcl.codec.hex.fromBits(session_id);
+			connection.query(`call set_session_id('${email_address}', '${session_id}')`, (err, results, fields) => {
+				if(err) return res.send(404, 'Not Found);	
+				res.json({
+					session_id: session_id
+				});
+			});
+		}else
+			return res.send(401, 'Unauthorized');
+	});
 });
 
 module.exports = router;
