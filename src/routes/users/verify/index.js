@@ -13,14 +13,14 @@ router.get('/', (req, res, next) =>{
 	if(!email_address || !password)
 		return res.send(412, 'Precondition Failed');
 
-	connection.query(`CALL verify_password('${email_address}')`, (err, results, fields) => {
+	connection.query(`CALL verify_password('${email_address}')`, (err, results, fields) =>{
 		if(err) return res.send(404, 'Not Found');
 		if(password === results[0][0].password){
 			let session_id = sjcl.hash.sha256.hash(new Date().getTime());
 			session_id = sjcl.codec.hex.fromBits(session_id);
 
-			connection.query(`call set_session_id('${email_address}', '${session_id}')`, (err, results, fields) => {
-				if(err) return res.send(404, 'Not Found');	
+			connection.query(`call set_session_id('${email_address}', '${session_id}')`, (err, results, fields) =>{
+				if(err) return res.send(404, 'Not Found');
 				res.json({
 					session_id: session_id
 				});
