@@ -24,7 +24,7 @@ $RECYCLE.BIN/
 
 #Webhook ----------------------------------------------------------------------
 webhook.sh
-webhook-log.txt
+webhook.log
 
 #JetBrains --------------------------------------------------------------------
 # User-specific stuff:
@@ -133,4 +133,3 @@ typings/
 
 # dotenv environment variables file
 .env
-
