@@ -4,13 +4,15 @@
   "description": "eco api",
   "main": "api.js",
   "scripts": {
-    "node-babel": "babel-node --presets es2015 api.js",
+    "babel-node": "babel-node --presets es2015 api.js",
     "nodemon": "nodemon"
   },
   "keywords": [],
   "author": "",
   "license": "CC BY-NC 4.0",
   "dependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
     "mysql": "^2.13.0",
     "restify": "^5.0.0",
     "restify-router": "^0.4.2",
