@@ -12,6 +12,7 @@
   "dependencies": {
     "mysql": "^2.13.0",
     "restify": "^5.0.0",
-    "restify-router": "^0.4.2"
+    "restify-router": "^0.4.2",
+    "sjcl": "^1.0.7"
   }
 }
