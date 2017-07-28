@@ -7,7 +7,7 @@ const sjcl = require('sjcl');
 const connection = require(process.cwd() + '/src/database/connect.js');
 
 router.get('/', (req, res, next) =>{
-	res.send('success - updated');
+	res.send('success');
 });
 
 module.exports = router;
