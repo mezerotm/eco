@@ -4,7 +4,8 @@
   "description": "eco api",
   "main": "api.js",
   "scripts": {
-    "start": "nodemon"
+    "node-babel": "babel-node --presets es2015 api.js",
+    "nodemon": "nodemon"
   },
   "keywords": [],
   "author": "",
