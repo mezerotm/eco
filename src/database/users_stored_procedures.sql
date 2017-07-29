@@ -275,5 +275,16 @@ CREATE PROCEDURE set_password(IN `email` VARCHAR(64), IN `password_in` VARCHAR(6
 		VALUES(`email`, `password_in`);
 	END IF;
 	END //
+	
+/* set the session id of the user with the given email address
+	@param email the email of the user
+	@param sess_id the session id value
+*/
+CREATE PROCEDURE set_session_id(IN `email` VARCHAR(64), IN `sess_id` VARCHAR(64))
+	BEGIN
+	UPDATE `users`
+	SET `session_id` = `sess_id`
+	WHERE `email_address` = `email`;
+	END //
 
 DELIMITER ;
