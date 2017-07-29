@@ -102,7 +102,7 @@ CREATE TABLE places (
 CREATE TABLE devices (
 	
 	`device_id` int(32) NOT NULL AUTO_INCREMENT,
-	`device_sensors_id` int(32) NOT NULL, /*this is the arduino MAC address*/
+	`device_sensors_id` VARCHAR(48) NOT NULL, /*this is the arduino MAC address*/
 	`created_datetime` DATETIME DEFAULT CURRENT_TIMESTAMP,
 	`last_modified` DATETIME ON UPDATE CURRENT_TIMESTAMP,
 	`place_id` int(32) NOT NULL,
@@ -148,7 +148,7 @@ CREATE TABLE data_records (
 	`record_id` int(32) NOT NULL AUTO_INCREMENT,
 	`record_timestamp` DATETIME DEFAULT CURRENT_TIMESTAMP,
 	`record_liters` int(32) NOT NULL,
-	`record_point_value` int(32) NOT NULL,
+	`record_point_value` int(32),
 	`device_id` int(32) NOT NULL,
 	PRIMARY KEY (`record_id`),
 	FOREIGN KEY (`device_id`) REFERENCES devices(`device_id`)
