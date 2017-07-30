@@ -3,6 +3,7 @@
  */
 const Router = require('restify-router').Router;
 const router = new Router();
+const sjcl = require('sjcl');
 const connection = require(process.cwd() + '/src/database/connect.js');
 
 router.get('/', (req, res, next) =>{
@@ -11,19 +12,26 @@ router.get('/', (req, res, next) =>{
 	let fname = req.params.fname;
 	let lname = req.params.lname;
 
-	if(!email_address || !fname || !lname)
+	if(!email_address || !password || !fname || !lname)
 		return res.send(412, 'Precondition Failed');
 
-    connection.query(`CALL create_users('${email_address}','${fname}','${lname}'`, (err, results, fields) => {
+	connection.query(`CALL create_user('${email_address}', '${fname}', '${lname}')`, (err, results, fields) =>{
         if(err) return res.send(404, 'Not Found');
-        
-        connectoin.query(`CALL set_password('${email_address}','${password}'`, (err, results, fields) => {
+
+		connection.query(`CALL set_password('${email_address}', '${password}')`, (err, results, fields) =>{
             if(err) return res.send(404, 'Not Found');
         });
-        
-        connectoin.query(`CALL set_session_id('${email_address}'`, (err, results, fields) => {
+
+		let session_id = sjcl.hash.sha256.hash(new Date().getTime());
+		session_id = sjcl.codec.hex.fromBits(session_id);
+
+		connection.query(`CALL set_session_id('${email_address}', '${session_id}')`, (err, results, fields) =>{
             if(err) return res.send(404, 'Not Found');
         });
+
+		res.json({
+			session_id: session_id
+		});
     });
 });
 
