@@ -281,13 +281,15 @@ CREATE PROCEDURE set_password(IN `email` VARCHAR(64), IN `password_in` VARCHAR(6
 	@param email the email address of the user whose session id is being set
 	@param session_id_in the session id that is being set to
 */
-CREATE PROCEDURE set_session_id(IN `email` VARCHAR(64), IN `session_id_in`)
-{
+CREATE PROCEDURE set_session_id(IN `email` VARCHAR(64), IN `session_id_in` VARCHAR(64))
+	BEGIN
 	IF EXISTS (SELECT *
 		FROM `users` as u
 		WHERE u.`email_address` = `email`) THEN
 		UPDATE `users`
 		SET `session_id` = `session_id_in`
-}
+		WHERE `email_address` = `email`;
+	END IF;
+	END //
 
 DELIMITER ;
