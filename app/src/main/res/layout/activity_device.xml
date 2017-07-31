@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="info.ksolodky.a.DeviceActivity">
+
+    <EditText
+        android:id="@+id/etDeviceName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etDeviceLocation"
+        android:layout_alignStart="@+id/etDeviceLocation"
+        android:layout_below="@+id/tvAddDevice"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:hint="Name"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="55dp" />
+
+    <EditText
+        android:id="@+id/etDeviceType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etDeviceLocation"
+        android:layout_alignStart="@+id/etDeviceLocation"
+        android:layout_below="@+id/etDeviceLocation"
+        android:ems="10"
+        android:hint="Type"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="98dp" />
+
+    <EditText
+        android:id="@+id/etDeviceLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etDeviceName"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Location"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="141dp" />
+
+    <TextView
+        android:id="@+id/tvAddDevice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Device"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="130dp"
+        tools:layout_editor_absoluteY="16dp"
+        android:layout_marginTop="26dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/btAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Add Device"
+        tools:layout_editor_absoluteX="147dp"
+        tools:layout_editor_absoluteY="199dp" />
+</RelativeLayout>

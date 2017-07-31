@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\Henry\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\26.0.0-alpha1\support-annotations-26.0.0-alpha1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="023ee503b631f69511e335a061ea008f8da60f40">
+        <dex dex="C:\A\app\build\intermediates\pre-dexed\debug\support-annotations-26.0.0-alpha1_f9b26216e5545462cfb4ea4b4c996e6511708195.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Henry\.android\build-cache\295e2651e1f25e07a9dcb1ffaa7c6160d362445e\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="C:\A\app\build\intermediates\pre-dexed\debug\classes_80a0845aa60c5b71009bfc1786b63b2e05e29222.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Henry\.android\build-cache\a1b627c414b813b34c3858155e787905d434dfc8\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
+        <dex dex="C:\A\app\build\intermediates\pre-dexed\debug\classes_4afdd1be28af89e82b0650d0660204abada1fbb6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Henry\.android\build-cache\aa853e47119f2e6b35af4340254b3eb6e94bd123\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
+        <dex dex="C:\A\app\build\intermediates\pre-dexed\debug\classes_3c6af832721148d57048b7829e10727268aede1b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Henry\.android\build-cache\33aa0639916d8467a1956685070b31dc7eaaa2ed\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
+        <dex dex="C:\A\app\build\intermediates\pre-dexed\debug\classes_9a6a7b3bea9b72aa3bde4cb76e06db00998aa5f0.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\A\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="48c2095328d13ed3c98deb5f04677ce87175ec7a">
+        <dex dex="C:\A\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_2646ee52702a41d89c680f14dce8076eeb32cc58\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\A\app\libs\GraphView-4.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3626a38455159707e355da96a61e598fbbc049e9">
+        <dex dex="C:\A\app\build\intermediates\transforms\dex\debug\folders\1000\2\GraphView-4.2.1_510a1e8f5be28a7dc8365e0f7ac943c1477a0da3\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Henry\.android\build-cache\04afb9021d4fc9b5e8e5dada8081fad287215b95\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
+        <dex dex="C:\A\app\build\intermediates\pre-dexed\debug\classes_4451a55f2e02a52dd1776788d3f2d6f403345085.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Henry\.android\build-cache\f85fca7f2de9929bf075816cdba01804d3a65d7f\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="952944218ecedea1554a513dec0c14d570642843">
+        <dex dex="C:\A\app\build\intermediates\pre-dexed\debug\classes_e13f288d0643895fb183427e4495e68986aab0bd.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\A\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="C:\A\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_ccc333e06a3a2d49fa3738ea57a7c73ac3afa440\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Henry\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="C:\A\app\build\intermediates\pre-dexed\debug\constraint-layout-solver-1.0.2_3e019a2721c4bc1e9f286773aaf3061df187fc57.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Henry\.android\build-cache\fd4e406324440ce7cda647c24c09118b0d83676f\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2cd4b982617e544728de0782d718a58ce1b06e3f">
+        <dex dex="C:\A\app\build\intermediates\pre-dexed\debug\classes_f77d4091d270e32a73d1fbea061b851cf205d310.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Henry\.android\build-cache\85d4a9688abfbdc02282fa4de6c2ecec34edb018\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9935891f23923f39d002087085d9696568a9f657">
+        <dex dex="C:\A\app\build\intermediates\pre-dexed\debug\classes_d2b2337cacb9c9b368da8098d98670dd6a35e21f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Henry\.android\build-cache\aad52f96c51c96e8c0eb5bb38c8b303fda8fcedf\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
+        <dex dex="C:\A\app\build\intermediates\pre-dexed\debug\classes_73e355b0995749a19b914bcc63f63f81aad48282.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Henry\.android\build-cache\3607be70c8b873aeaee9a893b8ac009257ff29ac\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\A\app\build\intermediates\pre-dexed\debug\classes_7dae11c165d78c868aada3b234285cd9a0bf6d29.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Henry\.android\build-cache\42ce7552fe3f7e817b4f299571f73ad54c859b3c\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
+        <dex dex="C:\A\app\build\intermediates\pre-dexed\debug\classes_ee9bb25d74cd8719b244a32fdb539d8d5582caa8.jar" />
+    </item>
+
+</items>
