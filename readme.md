@@ -7,9 +7,7 @@ Also being used is an online application which utilizes restify to read the data
 
 ## Install
 ### app
-This sectoin depends on a knowledge of: [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript), [restify](https://restify.com/), [HTTP/1.1](https://tools.ietf.org/html/rfc2616), [mySQL](https://www.mysql.com/)
-
-Prerequisites: [Node.js](https://nodejs.org/en/), [npm](https://www.npmjs.com/)
+This sectoin depends on a knowledge of: [Java](https://docs.oracle.com/en/java/), [Android Studio](https://developer.android.com/studio/index.html)
 
 ## Maintainers
 - [@mezerotm](https://github.com/mezerotm)
