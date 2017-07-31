@@ -1,20 +1,11 @@
 # eco
 > Use an IoT device to monitor water usage using gamification.
 
-Using arduino MKR1000 connected to a liquid flow meter, we send data to an express server and store data using mySQL.
-Also being used is an online application which utilizes express to read the data and present it in a fun way.
+Using arduino MKR1000 connected to a liquid flow meter, we send data to an restify server and store data using mySQL.
+Also being used is an online application which utilizes restify to read the data and present it in a fun way.
 
 
 ## Install
-### app
-This sectoin depends on a knowledge of: [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript), [express](https://expressjs.com/), [HTTP/1.1](https://tools.ietf.org/html/rfc2616), [mySQL](https://www.mysql.com/)
-
-Prerequisites: [Node.js](https://nodejs.org/en/), [npm](https://www.npmjs.com/)
-```
-$ git clone https://github.com/mezerotm/eco.git
-$ cd eco/app/
-$ npm install
-```
 ### arduino
 This sectoin depends on a knowledge of: [Arduino](https://www.arduino.cc/en/Reference/HomePage), [C++](http://www.cplusplus.com/)
 
