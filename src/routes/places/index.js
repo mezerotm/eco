@@ -11,31 +11,43 @@ router.get('/', (req, res, next) =>{
 	
 	connection.query(`CALL get_email_from_session_id('${req.params.session_id}')`, (err, results, fields) => {
 		if(err) return res.send(404, "Not Found");
-		
-		connection.query(`CALL get_place_from_user('${results[0][0].email_address}')`, (err, results, fields) => {
+
+		connection.query(`CALL get_places_from_user('${results[0][0].email_address}')`, (err, results, fields) =>{
 			if(err) return res.send(404, "Not Found");
 
-			if(req.params['place_id'] === 'only')
-				res.json({
-					place_id: results[0][0]
-				});
-				
-				
 			let places = {};
-			
-			for(let place_id in results[0][0]) {
-				connection.query(`CALL get_place('${place_id}')`, (err, results, fields) => {
-					if(err) return res.send(404, "Not Found");
-					
-					for(let key in req.params) {
-						if(key === 'session_id') continue;
-						if(req.params[key] === 'true')
-							places[key] = req.params[key];
-					}
-				});
+			let size = 0;
+
+			if(req.params['place_id'] === 'only'){
+				places.place_id = [];
+				for(let key in results[0])
+					places.place_id.push(results[0][size++].place_id);
+				res.json(places.place_id);
 			}
-			
-			res.json(places);
+
+			(function get_places(){
+				return new Promise((resolve, reject) =>{
+					results[0].forEach((key) =>{
+						connection.query(`CALL get_place('${results[0][size++].place_id}')`, (err, results, fields) =>{
+							if(err) return res.send(404, "Not Found");
+
+							places[results[0][0].place_id] = {};
+
+							for(let key in req.params){
+								if(key === 'session_id' || key === 'place_id') continue;
+								if(req.params[key] === 'true')
+									places[results[0][0].place_id][key] = results[0][0][key];
+							}
+
+							resolve(places);
+						});
+					});
+				});
+			})().then((places) =>{
+				res.json(places);
+			});
+
+
 		});
 	});
 });
