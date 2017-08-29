@@ -15,6 +15,7 @@ CREATE PROCEDURE create_device(IN `id` int(32), IN `device_id` VARCHAR(64))
 			WHERE p.`place_id` = `id`) THEN
 		INSERT INTO `devices` (`device_sensors_id`, `place_id`)
 		VALUES (`device_id`, `id`);
+	END IF;
 	END //
 
 /*
@@ -29,6 +30,7 @@ CREATE PROCEDURE get_devices_in_place(IN `place` int(32))
 		SELECT *
 		FROM `devices` as d
 		WHERE d.`place_id` = `place`;
+	END IF;
 	END //
 
 /*
@@ -43,6 +45,7 @@ CREATE PROCEDURE get_device(IN `id` int(32))
 		SELECT *
 		FROM `devices` as d
 		WHERE d.`device_id` = `id`;
+	END IF;
 	END //
 
 /*

@@ -15,6 +15,7 @@ CREATE PROCEDURE create_place(IN `email` VARCHAR(64), IN `place_name` VARCHAR(32
 			WHERE u.`email_address` = `email`) THEN
 		INSERT INTO `places` (`place_name`, `user_email`)
 		VALUES (`email`, `place_name`);
+	END IF;
 	END //
 
 /*
@@ -27,6 +28,7 @@ CREATE PROCEDURE get_place(IN `id` int(32))
 		SELECT *
 		FROM `places`
 		WHERE `place_id` = `id`;
+	END IF;
 	END //
 
 
@@ -36,10 +38,13 @@ CREATE PROCEDURE get_place(IN `id` int(32))
 */
 CREATE PROCEDURE get_places_from_user(IN `email` VARCHAR(64))
 	BEGIN
-	IF EXISTS (CALL get_user(`email`)) THEN
+	IF EXISTS (SELECT *
+		FROM `users` as u
+		WHERE u.`email_address` = `email`) THEN
 		SELECT `place_id`
 		FROM `places` as p
 		WHERE p.`user_email` = `email`;
+	END IF;
 	END //
 
 /*
