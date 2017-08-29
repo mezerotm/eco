@@ -39,9 +39,9 @@ CREATE PROCEDURE get_records_by_device(IN `device` int(32))
 */
 CREATE PROCEDURE get_record(IN `id` int(32))
 	BEGIN
-	SELECT *
-	FROM `data_records` as dr
-	WHERE dr.`record_id` = `id`;
+	IF EXISTS( SELECT *
+		FROM `data_records` as dr
+		WHERE dr.`record_id` = `id`);
 	END //
 
 

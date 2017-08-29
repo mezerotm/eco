@@ -42,4 +42,16 @@ CREATE PROCEDURE get_places_from_user(IN `email` VARCHAR(64))
 		WHERE p.`user_email` = `email`;
 	END //
 
+/*
+	get the address of a place
+	@param place_id the id of the place whose address is being looked up
+*/
+CREATE PROCEDURE get_address_of_place(IN `place_id` int(32))
+	BEGIN
+	SELECT *
+	FROM `addresses` as a
+	WHERE a.`place_id` = `place_id`;
+	END //
+
+
 DELIMITER ;

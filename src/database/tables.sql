@@ -15,6 +15,7 @@ CREATE TABLE users (
 	`created_datetime` DATETIME DEFAULT CURRENT_TIMESTAMP,
 	`last_modified` DATETIME ON UPDATE CURRENT_TIMESTAMP,
 	`account_active` BOOLEAN NOT NULL DEFAULT 1,
+	`water_goal` NUMERIC NOT NULL,
 	PRIMARY KEY (`email_address`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
