@@ -8,13 +8,13 @@ DELIMITER //
 	create a new device
 	@param id the place_id of the place this device will be in
 */
-CREATE PROCEDURE create_device(IN `id` int(32), IN `device_id` VARCHAR(64))
+CREATE PROCEDURE create_device(IN `id` int(32), IN `dev_id` VARCHAR(64))
 	BEGIN
 	IF EXISTS (SELECT *
 			FROM `places` p
 			WHERE p.`place_id` = `id`) THEN
 		INSERT INTO `devices` (`device_sensors_id`, `place_id`)
-		VALUES (`device_id`, `id`);
+		VALUES (`dev_id`, `id`);
 	END IF;
 	END //
 
@@ -48,29 +48,29 @@ CREATE PROCEDURE get_device(IN `id` int(32))
 	END IF;
 	END //
 
-/*
-	get the device id's of all devices within a device group
-	@param id the device group id
-*/
-CREATE PROCEDURE get_devices_in_group(IN `group_id` int(32))
-	BEGIN
-	IF EXISTS(SELECT `device_id`
-		FROM `device_group_members` as m
-		INNER JOIN `device_groups` as g
-		ON m.`group_id` = g.`group_id`
-		WHERE g.`group_id` = `group_id`);
-	END //
-
-/*
-	get all device groups given a place
-	@param place_id the id of the place the groups are within
-*/
-CREATE PROCEDURE get_device_groups_in_place(IN `place_id` int(32))
-	BEGIN
-	IF EXISTS(SELECT *
-		FROM `device_groups` as g
-		WHERE g.`place_id` = `place_id`);
-	END //
+# /*
+# 	get the device id's of all devices within a device group
+# 	@param id the device group id
+# */
+# CREATE PROCEDURE get_devices_in_group(IN `group_id` int(32))
+# 	BEGIN
+# 	IF EXISTS(SELECT `device_id`
+# 		FROM `device_group_members` as m
+# 		INNER JOIN `device_groups` as g
+# 		ON m.`group_id` = g.`group_id`
+# 		WHERE g.`group_id` = `group_id`);
+# 	END //
+#
+# /*
+# 	get all device groups given a place
+# 	@param place_id the id of the place the groups are within
+# */
+# CREATE PROCEDURE get_device_groups_in_place(IN `place_id` int(32))
+# 	BEGIN
+# 	IF EXISTS(SELECT *
+# 		FROM `device_groups` as g
+# 		WHERE g.`place_id` = `place_id`);
+# 	END //
 
 
 DELIMITER ;

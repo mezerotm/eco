@@ -8,13 +8,13 @@ DELIMITER //
 	creates a new place for the given user
 	@param email the email address of the user who is adding this place
 */
-CREATE PROCEDURE create_place(IN `email` VARCHAR(64), IN `place_name` VARCHAR(32))
+CREATE PROCEDURE create_place(IN `email` VARCHAR(64), IN `name` VARCHAR(32))
 	BEGIN
 	IF EXISTS (SELECT *
 			FROM `users` as u
 			WHERE u.`email_address` = `email`) THEN
 		INSERT INTO `places` (`place_name`, `user_email`)
-		VALUES (`email`, `place_name`);
+		VALUES (`name`, `email`);
 	END IF;
 	END //
 
