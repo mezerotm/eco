@@ -287,8 +287,7 @@ CREATE PROCEDURE set_session_id(IN `email` VARCHAR(64), IN `session_id_in` VARCH
 		FROM `users` as u
 		WHERE u.`email_address` = `email`) THEN
 		UPDATE `users`
-		SET `session_id` = `session_id_in`
-		WHERE `email_address` = `email`;
+		SET `session_id` = `session_id_in`;
 	END IF;
 	END //
 

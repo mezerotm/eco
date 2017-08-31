@@ -37,14 +37,14 @@ CREATE TABLE shadows (
 	table used to track the water usage goals of a user
 		- these goals are then used to determine the point value of a data record for the gamification of the system
 */
-CREATE TABLE water_goals (
+/*CREATE TABLE water_goals (
 	`goal_id` int(32) NOT NULL AUTO_INCREMENT,
 	`start_timestamp` DATETIME NOT NULL,
 	`end_timestamp` DATETIME,
 	`user_email` varchar(64) NOT NULL,
 	PRIMARY KEY (`goal_id`),
 	FOREIGN KEY (`user_email`) REFERENCES users(`email_address`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;*/
 
 
 /*

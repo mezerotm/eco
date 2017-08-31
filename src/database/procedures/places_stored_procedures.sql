@@ -38,9 +38,7 @@ CREATE PROCEDURE get_place(IN `id` int(32))
 */
 CREATE PROCEDURE get_places_from_user(IN `email` VARCHAR(64))
 	BEGIN
-	IF EXISTS (SELECT *
-		FROM `users` as u
-		WHERE u.`email_address` = `email`) THEN
+	IF EXISTS (CALL get_user(`email`)) THEN
 		SELECT `place_id`
 		FROM `places` as p
 		WHERE p.`user_email` = `email`;
@@ -51,11 +49,13 @@ CREATE PROCEDURE get_places_from_user(IN `email` VARCHAR(64))
 	get the address of a place
 	@param place_id the id of the place whose address is being looked up
 */
-CREATE PROCEDURE get_address_of_place(IN `place_id` int(32))
+CREATE PROCEDURE get_address_of_place(IN `place_id_in` int(32))
 	BEGIN
-	SELECT *
+	SELECT a.`address_id`
 	FROM `addresses` as a
-	WHERE a.`place_id` = `place_id`;
+	INNER JOIN `places` as p
+	ON a.`address_id` = p.`address_id`
+	WHERE p.`place_id` = `place_id_in`;
 	END //
 
 

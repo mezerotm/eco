@@ -17,7 +17,7 @@ CREATE PROCEDURE create_record(IN `device` int(32), IN `liter_val` int(32))
 			WHERE d.`device_id` = `device`) THEN
 		INSERT INTO `data_records` (`record_liters`, `device_id`)
 		VALUES (`liter_val`, `device`);
-    END IF;
+	END IF;
 	END //
 
 /*
@@ -32,7 +32,7 @@ CREATE PROCEDURE get_records_by_device(IN `device` int(32))
 		SELECT *
 		FROM `data_records` as dr
 		WHERE dr.`device_id` = `device`;
-    END IF;
+	END IF;
 	END //
 
 /*
@@ -41,9 +41,9 @@ CREATE PROCEDURE get_records_by_device(IN `device` int(32))
 */
 CREATE PROCEDURE get_record(IN `id` int(32))
 	BEGIN
-	IF EXISTS( SELECT *
+	SELECT *
 		FROM `data_records` as dr
-		WHERE dr.`record_id` = `id`);
+		WHERE dr.`record_id` = `id`;
 	END //
 
 
