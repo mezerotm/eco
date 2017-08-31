@@ -48,7 +48,6 @@ CREATE PROCEDURE get_device(IN `id` int(32))
 	END IF;
 	END //
 
-<<<<<<< HEAD
 /*
 	get an individual device group based on group id
 	@param id the group id of the device group being retrieved
@@ -60,7 +59,7 @@ CREATE PROCEDURE get_device_group(IN `id` int(32))
 	WHERE `group_id` = `id`;
 	END //
 
-	
+
 /*
  	get the device id's of all devices within a device group
  	@param id the device group id
