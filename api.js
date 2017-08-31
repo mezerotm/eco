@@ -28,6 +28,6 @@ function recursivelyApplyRoutes(route){
 recursivelyApplyRoutes('/src/routes');
 
 server.listen(process.env.PORT || 80, err =>{
-	if(err) console.log(err);
-	else console.log('%s listening at %s', server.name, server.url);
+	if(err) return console.error(err);
+	console.log('%s listening at %s', server.name, server.url);
 });
