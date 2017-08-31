@@ -66,11 +66,11 @@ CREATE PROCEDURE get_device_group(IN `id` int(32))
  */
  CREATE PROCEDURE get_devices_in_group(IN `group_id` int(32))
  	BEGIN
- 	IF EXISTS(SELECT `device_id`
+ 	SELECT `device_id`
  		FROM `device_group_members` as m
  		INNER JOIN `device_groups` as g
  		ON m.`group_id` = g.`group_id`
- 		WHERE g.`group_id` = `group_id`);
+ 		WHERE g.`group_id` = `group_id`;
  	END //
 
  /*
@@ -79,9 +79,9 @@ CREATE PROCEDURE get_device_group(IN `id` int(32))
  */
  CREATE PROCEDURE get_device_groups_in_place(IN `place_id` int(32))
  	BEGIN
- 	IF EXISTS(SELECT *
+ 	SELECT *
  		FROM `device_groups` as g
- 		WHERE g.`place_id` = `place_id`);
+ 		WHERE g.`place_id` = `place_id`;
  	END //
 
 /*
