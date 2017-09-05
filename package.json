@@ -6,7 +6,8 @@
   "scripts": {
     "nodemon:babel-node": "nodemon -x babel-node --presets es2015 api.js",
     "nodemon": "nodemon",
-    "start": "nodemon"
+    "start": "node api.js",
+    "web": "start"
   },
   "author": "mezerotm",
   "license": "CC BY-NC 4.0",
