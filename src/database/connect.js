@@ -3,15 +3,15 @@
  */
 const mysql = require('mysql');
 const connection = mysql.createConnection({
-	host: 'localhost',
-	user: 'root',
-	password: 'password',
-	database: 'eco'
+	host: 'us-cdbr-iron-east-05.cleardb.net',
+	user: 'b74060db1ae5a3',
+	password: '2362c679',
+	database: 'heroku_0367e03a8c5429a'
 });
 
 connection.connect((err) =>{
 	if(err) return console.error(`error connecting: ${err}`);
-	console.log('connected database at 3306')
+	console.log('connected database at 3306');
 });
 
 module.exports = connection;

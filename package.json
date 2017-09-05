@@ -5,7 +5,8 @@
   "main": "api.js",
   "scripts": {
     "nodemon:babel-node": "nodemon -x babel-node --presets es2015 api.js",
-    "nodemon": "nodemon"
+    "nodemon": "nodemon",
+    "start": "nodemon"
   },
   "keywords": [],
   "author": "",
