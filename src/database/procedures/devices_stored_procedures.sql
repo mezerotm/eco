@@ -7,6 +7,7 @@ DELIMITER //
 /*
 	create a new device
 	@param id the place_id of the place this device will be in
+	@param dev_id the mac address of the arduino associated with this device
 */
 CREATE PROCEDURE create_device(IN `id` int(32), IN `dev_id` VARCHAR(64))
 	BEGIN
