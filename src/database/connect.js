@@ -9,9 +9,4 @@ const connection = mysql.createPool({
 	database: 'heroku_0367e03a8c5429a'
 });
 
-//connection.connect((err) =>{
-//	if(err) return console.error(`error connecting: ${err}`);
-//	console.log('connected database at 3306');
-//});
-
 module.exports = connection;
