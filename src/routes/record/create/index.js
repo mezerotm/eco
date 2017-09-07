@@ -1,6 +1,5 @@
 const Router = require('restify-router').Router;
 const router = new Router();
-const sjcl = require('sjcl');
 const connection = require(process.cwd() + '/src/database/connect.js');
 
 router.get('/', (req, res, next) => {
@@ -15,3 +14,5 @@ router.get('/', (req, res, next) => {
 		return res.send(201, 'Created');
 	});
 });
+
+module.exports = router;
