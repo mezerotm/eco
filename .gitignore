@@ -134,4 +134,4 @@ typings/
 # dotenv environment variables file
 .env
 
-/src/database/connect.js
+/src/database/procedures/production.js
