@@ -193,6 +193,17 @@ CREATE PROCEDURE update_device_sensor_id(IN `dev_id` int(32), IN `new_mac` varch
 	END IF;
 	END //
 
+/*
+	get the device id given the mac address of the associated arduino
+	@param mac the mac address of the arduino associated with the device being retrieved
+*/
+CREATE PROCEDURE get_device_id_from_mac(IN `mac` varchar(48))
+	BEGIN
+	SELECT `device_id`
+	FROM `devices`
+	WHERE `device_sensors_id` = `mac`;
+	END //
+
 
 
 DELIMITER ;
