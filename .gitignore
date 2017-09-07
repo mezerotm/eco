@@ -134,4 +134,4 @@ typings/
 # dotenv environment variables file
 .env
 
-/src/database/procedures/production.js
+/src/database/production.js
