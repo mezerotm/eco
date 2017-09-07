@@ -1,17 +1,14 @@
 /**
  * Created by Carlos on 6/29/2017.
  */
+const production = require('./production.js');
 const mysql = require('mysql');
-const connection = mysql.createConnection({
-	host: 'localhost',
-	user: 'root',
-	password: 'password',
-	database: 'eco'
-});
 
-connection.connect((err) =>{
-	if(err) return console.error(`error connecting: ${err}`);
-	console.log('connected database at 3306')
+const connection = mysql.createPool({
+	host: production.host,
+	user: production.user,
+	password: production.password,
+	database: production.database
 });
 
 module.exports = connection;

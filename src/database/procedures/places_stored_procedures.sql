@@ -38,7 +38,7 @@ CREATE PROCEDURE get_place(IN `id` int(32))
 */
 CREATE PROCEDURE get_places_from_user(IN `email` VARCHAR(64))
 	BEGIN
-	IF EXISTS (CALL get_user(`email`)) THEN
+	IF EXISTS (SELECT * FROM `users` as u WHERE u.`email_address` = `email` AND u.`account_active` = 1) THEN
 		SELECT `place_id`
 		FROM `places` as p
 		WHERE p.`user_email` = `email`;
