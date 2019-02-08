@@ -4,7 +4,7 @@
 
 > Use an IoT device to monitor water usage using gameification
 
-Using arduino MKR1000 connected to a liquid flow meter, we send data to an restify server and store data using mySQL.
+Using arduino MKR1000 connected to a liquid flow meter, we send data to a restify server and store data using mySQL.
 Also being used is an online application which utilizes restify to read the data and present it in a fun way.
 
 ## Table of Contents
